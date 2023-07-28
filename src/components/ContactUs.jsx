@@ -27,18 +27,16 @@ const ContactUs = () => {
       message: "required",
     }
   );
-  const handleClick = async(event) => {
+  const handleClick = async (event) => {
     const isValid = await form.validate(event);
-    if (isValid){
+    if (isValid) {
       try {
-        const {data:res} = await console.log(res.message);
-        return(
-          <h1>{res.message}</h1>
-        )
-      }catch (error) {
-        console.log(error)
+        const { data: res } = await console.log(res.message);
+        return <h1>{res.message}</h1>;
+      } catch (error) {
+        console.log(error);
       }
-      console.log(fields)
+      console.log(fields);
     }
   };
   return (
@@ -58,31 +56,28 @@ const ContactUs = () => {
         }}
       ></div>
 
-      <section id="ContactUs" class="pt-20 px-4  h-full">
+      <section id="ContactUs" class="pt-20 px-4  h-full flex">
         <div class="container mx-auto flex items-center">
-          <div class="w-1/5 flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 animate-spin">
+          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 animate-pulse">
             <img
               src="genztech-logo.png"
               alt="Gen Z Tech Logo"
-              class="w-full h-64 m-4  border-yellow-500 border-x-2 border-y-8 object-contain animate-spin-slow"
+              class=" w-40 h-40 m-4  border-yellow-500 border-x-2 border-y-8 object-contain animate-spin"
             />
           </div>
 
           <div class="w-1/2 px-4">
             <h2 class="text-3xl font-bold mb-4 text-yellow-500">Contact Us</h2>
             <p class="text-lg text-gray-500">
-              Have questions or need more information? Reach out to us.
+              Have questions or need more information?<br/> Reach out to us.
             </p>
             <p class="text-lg text-gray-500">Phone: (123) 456-7890</p>
             <p class="text-lg text-gray-500">Email: info@genztech.com</p>
           </div>
         </div>
-      </section>
-
-      <section id="Contact" class="py-7 px-4">
-        <div class="container mx-auto flex flex-col justify-center items-center">
+        <div class="container mx-auto flex flex-col justify-center items-center pb-5">
           <h2 class="text-3xl font-bold mb-4 text-yellow-500">Get in Touch</h2>
-          <div class="mt-8 w-2/5 mx-20 bg-white rounded-lg p-6 shadow-lg z-10">
+          <div class="mt-8 w-4/5 mx-2 bg-white rounded-lg p-6 shadow-lg z-10">
             <form action="#" method="POST" onSubmit={handleClick}>
               <div class="mb-4">
                 <label
