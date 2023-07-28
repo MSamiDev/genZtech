@@ -4,7 +4,7 @@ import keys from "../assets/images/keys.png";
 import attend from "../assets/images/attend.png";
 const DevOps = () => {
   return (
-    <div id="DevOps" className="from-yellow-500   to-white bg-gradient-to-r">
+    <div id="DevOps" className="from-yellow-500   to-white bg-gradient-to-l">
       <div
         id="Overview"
         className="w-3/5   h-screen  flex flex-col justify-center float-left "

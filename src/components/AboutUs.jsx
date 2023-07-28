@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutUs = () => {
     return (
-        <div className="h-screen from-yellow-500   to-white bg-gradient-to-r">
+        <div className="h-screen from-yellow-500   to-white bg-gradient-to-l">
             <section id="AboutUs" class="py-20 px-20 text-center">
                 <div class="container mx-auto px-20 ">
                     <h2 class="text-5xl font-bold mb-4 ">Welcome to Gen Z Tech</h2>
