@@ -26,11 +26,17 @@ const DevOps = () => {
           <img src={git2} alt="" />
         </div>
       </div>
+      <div className="flex justify-center items-center" id="What">
       <div
-        id="What"
-        className="w-3/5 p-20 h-screen flex flex-col justify-center float-left "
-      >
-        <h1 className="px-20 pt- pb-10 font-bold text-5xl text-gray float-left ">
+        
+        className="w-2/5 p-20 h-screen flex flex-col justify-center float-left "
+        >
+        <div className=" flex justify-center h-full  items-center ">
+          <img className="w-full pr-10" src={keys} alt="" />
+        </div>
+      </div>
+      <div className="w-3/5  flex-col justify-center  h-screen items-center float-left ">
+        <h1 className="p-20 pt-48 pb-10 font-bold text-5xl text-gray ">
           What is DevOps?
         </h1>
         <p className="px-20 pb-10 text-lg ">
@@ -49,17 +55,13 @@ const DevOps = () => {
           role-specific.
         </p>
       </div>
-      <div className="w-2/5  flex justify-center  h-screen items-center ">
-        <div className=" flex justify-center h-full  items-center ">
-          <img className="w-full pr-10" src={keys} alt="" />
-        </div>
       </div>
 
       <div
         id="Why"
         className="w-3/5 p-20 h-screen  flex flex-col justify-center float-left "
       >
-        <h1 className="px-20 pt- pb-10 font-bold text-5xl text-gray float-left ">
+        <h1 className="p-20 pt- pb-10 font-bold text-5xl text-gray float-left ">
           Why is DevOps used?
         </h1>
         <p className="px-20 pb-10 text-lg ">

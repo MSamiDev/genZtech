@@ -58,11 +58,11 @@ const ContactUs = () => {
 
       <section id="ContactUs" class="pt-20 px-4  h-full flex">
         <div class="container mx-auto flex items-center">
-          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 animate-pulse">
+          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 animate-spin">
             <img
               src="genztech-logo.png"
               alt="Gen Z Tech Logo"
-              class=" w-40 h-40 m-4  border-yellow-500 border-x-2 border-y-8 object-contain animate-spin"
+              class=" w-40 h-40 m-4  border-yellow-500 border-x-2 border-y-8 object-contain "
             />
           </div>
 
