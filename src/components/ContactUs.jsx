@@ -3,6 +3,7 @@ import { useFormInputValidation } from "react-form-input-validation";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { BsFillSendFill } from "react-icons/bs";
+import z2 from "../assets/images/z2.jpg";
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -58,11 +59,11 @@ const ContactUs = () => {
 
       <section id="ContactUs" class="pt-20 px-4  h-full flex">
         <div class="container mx-auto flex items-center">
-          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 animate-spin">
+          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 z ">
             <img
-              src="genztech-logo.png"
+              src={z2}
               alt="Gen Z Tech Logo"
-              class=" w-40 h-40 m-4  border-yellow-500 border-x-2 border-y-8 object-contain "
+              class=" w-40  m-4  border-yellow-500 border-2  object-contain -z-0 "
             />
           </div>
 
