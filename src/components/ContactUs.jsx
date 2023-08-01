@@ -79,7 +79,7 @@ const ContactUs = () => {
           <img
             src={GenZ_withText_trans}
             alt="Gen Z Tech Logo"
-            className="w-40 m-4 object-contain  absolute left-1/4 md:left-1/4 lg:left-20 lg:top-52 md:top-56 -top-5 "
+            className="w-40 m-4 object-contain  sm:absolute relative -top-44  sm:left-1/4 sm:translate-x-1/2 md:-left-10  lg:-left-10 lg:top-52 md:top-52 sm:-top-5 "
           />
 
           <div className="w-full md:w-1/2   px-4">
