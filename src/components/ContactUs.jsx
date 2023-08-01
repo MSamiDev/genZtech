@@ -45,7 +45,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="relative bg-black overflow-hidden "  id="ContactUs">
+    <div className="relative bg-black overflow-hidden " id="ContactUs">
       {/* Background shapes */}
       <div
         className="h-80 w-96 absolute blur-6xl rotate-45 top-10 -right-60"
@@ -62,25 +62,17 @@ const ContactUs = () => {
         }}
       ></div>
 
-      <section
-       
-        className="pt-10 px-4 md:px-20 h-full flex flex-col md:flex-row"
-      >
+      <section className="pt-10 px-4 md:px-20 h-full flex flex-col md:flex-row">
         <div className="container mx-auto flex flex-col justify-center items-center md:flex-row md:items-center relative">
-          <div className=" w-40 h-40  mx-10 flex justify-center rounded-full  border-yellow-500 border-x-8 border-y-2  animate-spin">
-            <div className="w-40 h-40  border-yellow-500 border-4 object-contain ">
-
-            </div>
-            {/* <div class="animation-container relative w-400 h-300 overflow-hidden">
-  <img class="image absolute w-full h-full opacity-0 animate-fade-in-out" src="GenZ_withoutText_trans" alt="Image " />
-  <img class="image absolute w-full h-full opacity-0 animate-fade-in-out" src="GenZ_withText_trans.jpg" alt="Image " />
-</div> */}
+          <div className=" flex justify-center items-center">
+            <div className=" w-44 h-44  mx-10 flex justify-center rounded-full  border-yellow-500 border-x-2 border-y-8 motion-safe:animate-spin"></div>
+            <div className="w-40 h-40  border-yellow-500 border-4 object-contain absolute motion-safe:animate-spin-slow "></div>
+            <img
+              src={GenZ_withText_trans}
+              alt="Gen Z Tech Logo"
+              className="w-40 m-4 object-contain absolute "
+            />
           </div>
-          <img
-            src={GenZ_withText_trans}
-            alt="Gen Z Tech Logo"
-            className="w-40 m-4 object-contain  sm:absolute relative -top-44  sm:left-1/4 sm:translate-x-1/2 md:-left-10  lg:-left-10 lg:top-52 md:top-52 sm:-top-5 "
-          />
 
           <div className="w-full md:w-1/2   px-4">
             <h2 className="text-xl text-center lg:text-left md:text-3xl font-bold mb-4 text-yellow-500 md:justify-center md:items-center">
