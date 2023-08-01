@@ -3,7 +3,8 @@ import { useFormInputValidation } from "react-form-input-validation";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { BsFillSendFill } from "react-icons/bs";
-import z2 from "../assets/images/z2.jpg";
+import GenZ_withText_trans from "../assets/images/GenZ_withText_trans.png";
+
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,6 +15,7 @@ const ContactUs = () => {
   console.log(email);
   console.log(Pno);
   console.log(msg);
+
   const [fields, errors, form] = useFormInputValidation(
     {
       name: "",
@@ -28,6 +30,7 @@ const ContactUs = () => {
       message: "required",
     }
   );
+
   const handleClick = async (event) => {
     const isValid = await form.validate(event);
     if (isValid) {
@@ -40,55 +43,76 @@ const ContactUs = () => {
       console.log(fields);
     }
   };
+
   return (
-    <div className=" relative bg-black overflow-hidden ">
+    <div className="relative bg-black overflow-hidden "  id="ContactUs">
+      {/* Background shapes */}
       <div
-        className=" h-80 w-96 absolute   blur-6xl rotate-45 top-10 -right-60"
+        className="h-80 w-96 absolute blur-6xl rotate-45 top-10 -right-60"
         style={{
           background:
-            " radial-gradient(rgba(208,193,25,1) 0%, rgba(240,179,10,8) 10%, rgba(0,0,0,7) 90%)",
+            "radial-gradient(rgba(208,193,25,1) 0%, rgba(240,179,10,8) 10%, rgba(0,0,0,7) 90%)",
         }}
       ></div>
       <div
-        className=" h-80 w-52 absolute   blur-6xl -rotate-45 bottom-60 left-10"
+        className="h-80 w-52 absolute blur-6xl -rotate-45 bottom-60 left-10"
         style={{
           background:
-            " radial-gradient(rgba(208,193,25,1) 0%, rgba(240,179,10,8) 10%, rgba(0,0,0,7) 90%)",
+            "radial-gradient(rgba(208,193,25,1) 0%, rgba(240,179,10,8) 10%, rgba(0,0,0,7) 90%)",
         }}
       ></div>
 
-      <section id="ContactUs" class="pt-20 px-4  h-full flex">
-        <div class="container mx-auto flex items-center">
-          <div class="flex justify-center rounded-full border-yellow-500 border-x-8 border-y-2 z ">
-            <img
-              src={z2}
-              alt="Gen Z Tech Logo"
-              class=" w-40  m-4  border-yellow-500 border-2  object-contain -z-0 "
-            />
+      <section
+       
+        className="pt-10 px-4 md:px-20 h-full flex flex-col md:flex-row"
+      >
+        <div className="container mx-auto flex flex-col justify-center items-center md:flex-row md:items-center relative">
+          <div className=" w-40 h-40  mx-10 flex justify-center rounded-full  border-yellow-500 border-x-8 border-y-2  animate-spin">
+            <div className="w-40 h-40  border-yellow-500 border-4 object-contain ">
+
+            </div>
+            {/* <div class="animation-container relative w-400 h-300 overflow-hidden">
+  <img class="image absolute w-full h-full opacity-0 animate-fade-in-out" src="GenZ_withoutText_trans" alt="Image " />
+  <img class="image absolute w-full h-full opacity-0 animate-fade-in-out" src="GenZ_withText_trans.jpg" alt="Image " />
+</div> */}
           </div>
+          <img
+            src={GenZ_withText_trans}
+            alt="Gen Z Tech Logo"
+            className="w-40 m-4 object-contain  sm:absolute relative -top-44  sm:left-1/4 sm:translate-x-1/2 md:-left-10  lg:-left-10 lg:top-52 md:top-52 sm:-top-5 "
+          />
 
-          <div class="w-1/2 px-4">
-            <h2 class="text-3xl font-bold mb-4 text-yellow-500">Contact Us</h2>
-            <p class="text-lg text-gray-500">
-              Have questions or need more information?<br/> Reach out to us.
+          <div className="w-full md:w-1/2   px-4">
+            <h2 className="text-xl text-center lg:text-left md:text-3xl font-bold mb-4 text-yellow-500 md:justify-center md:items-center">
+              Contact Us
+            </h2>
+            <p className="text-sm text-center lg:text-left md:text-lg text-gray-500">
+              Have questions or need more information?
+              <br /> Reach out to us.
             </p>
-            <p class="text-lg text-gray-500">Phone: (123) 456-7890</p>
-            <p class="text-lg text-gray-500">Email: info@genztech.com</p>
+            <p className="text-sm text-center lg:text-left md:text-lg text-gray-500">
+              Phone: (123) 456-7890
+            </p>
+            <p className="text-sm text-center lg:text-left md:text-lg text-gray-500">
+              Email: info@genztech.com
+            </p>
           </div>
         </div>
-        <div class="container mx-auto flex flex-col justify-center items-center pb-5">
-          <h2 class="text-3xl font-bold mb-4 text-yellow-500">Get in Touch</h2>
-          <div class="mt-8 w-4/5 mx-2 bg-white rounded-lg p-6 shadow-lg z-10">
+        <div className="container mx-auto flex flex-col justify-center items-center pb-5">
+          <h2 className="text-xl md:text-3xl font-bold mb-4 text-yellow-500">
+            Get in Touch
+          </h2>
+          <div className="mt-8 w-full md:w-4/5 mx-2 bg-white rounded-lg p-6 shadow-lg z-10">
             <form action="#" method="POST" onSubmit={handleClick}>
-              <div class="mb-4">
+              <div className="mb-4">
                 <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  for="name"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="name"
                 >
                   Name
                 </label>
                 <input
-                  class="appearance-none focus:border-black focus:border-4 bg-gray-100 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
+                  className="appearance-none focus:border-black focus:border-4 bg-gray-100 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
                   id="name"
                   name="name"
                   type="text"
@@ -100,15 +124,15 @@ const ContactUs = () => {
                 />
                 <bold className="text-red-700 font-bold">{errors.name}</bold>
               </div>
-              <div class="mb-4">
+              <div className="mb-4">
                 <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  for="email"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="email"
                 >
                   Email
                 </label>
                 <input
-                  class="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
+                  className="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
                   id="email"
                   name="email"
                   type="email"
@@ -120,15 +144,15 @@ const ContactUs = () => {
                 />
                 <bold className="text-red-700 font-bold">{errors.email}</bold>
               </div>
-              <div class="mb-4">
+              <div className="mb-4">
                 <label
-                  class="block text-gray-700  text-sm font-bold mb-2"
-                  for="phoneNumber"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="phoneNumber"
                 >
                   Phone Number
                 </label>
                 <input
-                  class="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
+                  className="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
                   id="Pno"
                   type="tel"
                   name="Pno"
@@ -140,15 +164,15 @@ const ContactUs = () => {
                 />
                 <bold className="text-red-700 font-bold">{errors.Pno}</bold>
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  for="message"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="message"
                 >
                   Message
                 </label>
                 <textarea
-                  class="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
+                  className="appearance-none bg-gray-100 focus:border-black focus:border-4 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
                   id="message"
                   name="message"
                   rows="4"
@@ -160,11 +184,9 @@ const ContactUs = () => {
                 ></textarea>
                 <bold className="text-red-700 font-bold">{errors.message}</bold>
               </div>
-              <div class="flex items-center justify-center flex-row ">
+              <div className="flex items-center justify-center flex-row">
                 <button
-                  class={
-                    "flex justify-center items-center bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  }
+                  className="flex justify-center items-center bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
                   type="submit"
                 >
                   Send Message <BsFillSendFill className="mx-2" />
