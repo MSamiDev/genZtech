@@ -5,14 +5,14 @@ import HeroPage from "../components/HeroPage";
 
 import ContactUs from "../components/ContactUs";
 import AboutUs from "../components/AboutUs";
-import DevOps from "../components/DevOps";
+import Courses from "../components/Courses";
 
 const Home = () => {
     return (
         <div className="">
             <Header />
             <HeroPage/>
-            <DevOps/>
+            <Courses/>
             <AboutUs/>
             <ContactUs/>
             <Footer />
