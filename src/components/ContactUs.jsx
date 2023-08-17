@@ -10,23 +10,29 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [Pno, setPno] = useState("");
   const [msg, setMsg] = useState("");
+  const [course, setCourse] = useState("");
 
   console.log(name);
   console.log(email);
   console.log(Pno);
   console.log(msg);
+  console.log(course);
+
 
   const [fields, errors, form] = useFormInputValidation(
     {
       name: "",
       email: "",
       Pno: "",
+      course:"",
       message: "",
+
     },
     {
       name: "required",
       email: "required|email",
       Pno: "required|numeric",
+      course: "required",
       message: "required",
     }
   );
@@ -83,10 +89,10 @@ const ContactUs = () => {
               <br /> Reach out to us.
             </p>
             <p className="text-sm text-center lg:text-left md:text-lg text-gray-500">
-              Phone: (123) 456-7890
+              Phone: +91 7066008889
             </p>
             <p className="text-sm text-center lg:text-left md:text-lg text-gray-500">
-              Email: info@genztech.com
+              Email: genztechitclasses@gmail.com
             </p>
           </div>
         </div>
@@ -155,6 +161,26 @@ const ContactUs = () => {
                   required
                 />
                 <bold className="text-red-700 font-bold">{errors.Pno}</bold>
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="name"
+                >
+                  Course
+                </label>
+                <input
+                  className="appearance-none focus:border-black focus:border-4 bg-gray-100 border-yellow-500 border-4 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 "
+                  id="corse"
+                  name="corse"
+                  type="text"
+                  placeholder="Intrested course"
+                  onBlur={form.handleBlurEvent}
+                  onChange={form.handleChangeEvent}
+                  value={fields.course}
+                  required
+                />
+                <bold className="text-red-700 font-bold">{errors.course}</bold>
               </div>
               <div className="mb-6">
                 <label

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
+import DevOps from "./pages/DevOps";
+import WebDevelopment from "./pages/WebDevelopment";
 
 
 
@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/BlogPost" element={<BlogPost />} />
+        <Route path="/DevOps" element={<DevOps />} />
+        <Route path="/WebDevelopment" element={<WebDevelopment />} />
       </Routes>
     </div>
   );
